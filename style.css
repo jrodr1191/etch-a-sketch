@@ -1,0 +1,130 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(208, 182, 255);
+    margin: 0;
+    font-family: Roboto;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(152, 100, 247);
+}
+
+.sitename {
+    margin-right: auto;
+}
+
+.erase,
+.resize {
+    margin: 8px;
+    padding: 12px 16px;
+    background-color: rgb(208, 182, 255);
+    border-radius: 25px;
+    border: 2px solid purple;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 520px;
+    padding: 0;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3 ease-in-out;
+    z-index: -1;
+}
+
+.modal-inner {
+    display: flex;
+    background-color: rgb(229, 156, 252);
+    padding: 12px 8px 12px 36px;
+    border-radius: 8px;
+}
+
+.modal-inner-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-inner-text button {
+    align-self: center;
+}
+
+.modal-inner-top {
+    display: flex;
+}
+
+.modal-inner button {
+    height: 24px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(229, 156, 252);
+    border: 1px solid purple;
+}
+
+.modal-inner-bot {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 12px;
+}
+
+.modal-inner-bot-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.modal-inner-bot-box input{
+    margin: 0px 24px;
+    height: 18px;
+    width: 48px;
+    border-radius: 8px;
+    background-color: rgb(255, 212, 255);
+    border: 1px solid purple;
+}
+
+.modal-inner-top p {
+    flex: auto;
+    text-align: center;
+}
+
+.confirm button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 60px;
+    height: 28px;
+    margin-top: 12px;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
